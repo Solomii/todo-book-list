@@ -1,0 +1,33 @@
+.book_wrapper {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.book_title {
+  font-size: 16px;
+}
+
+.book_title.isRead {
+  color: red;
+  text-decoration: line-through;
+}
+
+.book_row {
+  display: flex;
+  align-items: center;
+}
+
+.book_pointer {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.book_pointer {
+  cursor: pointer;
+}
