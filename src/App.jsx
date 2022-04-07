@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./style.css";
 import BOOKS_LIST from './store/books.json'
 import { Books } from "./components/Books";
+import { Form } from "./components/AddForm"
 
 const App = () => {
   const [bookList, setBookList] = useState(BOOKS_LIST)
@@ -25,6 +26,7 @@ const App = () => {
   }
   return (
     <div className="container">
+      <Form/>
       <Books data={bookList} onRemoveBook={removeBook} onReadBook={readBook}/>
     </div>
   
