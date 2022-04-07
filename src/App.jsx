@@ -17,7 +17,10 @@ const App = () => {
     const oldObject = bookList[index];
     const newObject = { ...oldObject, isRead: !oldObject.isRead }
     
-    setBookList(prev => ([...prev.slice(0, index), newObject, ...prev.slice(index + 1)]));
+    // setBookList(prevState => ([...prevState.slice(0, index), newObject, ...prevState.slice(index + 1)]));
+    setBookList(prevState => {
+      return [...prevState.slice(0, index), newObject, ...prevState.slice(index + 1)];
+    })
     
   }
   return (

@@ -1,0 +1,15 @@
+.books_form {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books_input {
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+.books_button {
+ 
+}
