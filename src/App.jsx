@@ -24,9 +24,16 @@ const App = () => {
     })
     
   }
+
+  const onAddNewBook = (book)  => {
+    setBookList( (prev) => {
+    return [...prev, {...book, id: bookList.length +1}]
+  })
+    console.log("book", book)
+  }
   return (
     <div className="container">
-      <Form/>
+      <Form onAddNewBook={onAddNewBook}/>
       <Books data={bookList} onRemoveBook={removeBook} onReadBook={readBook}/>
     </div>
   
