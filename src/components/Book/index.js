@@ -19,7 +19,6 @@ export const Book = ({ count, item, onRemoveBook, onReadBook }) => {
         >
         </input>
         </span>
-       
       </li>
    </>
   )

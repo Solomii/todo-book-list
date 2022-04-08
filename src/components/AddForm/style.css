@@ -3,8 +3,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  
+  align-items: center; 
 }
 
 .books_input {
@@ -13,10 +12,19 @@
   padding: 20px;
   height: 30px;
   border-radius: 5px;
-  
 }
 
 .books_button {
   width: 100px;
   height: 35px;
+  background-color: #0b76ef;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
 }
+
+.books_button:active {
+  transform: translateY(4px);
+}
+

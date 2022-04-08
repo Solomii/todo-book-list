@@ -14,7 +14,7 @@
 }
 
 .book_title.isRead {
-  color: red;
+  color: #4CAF50;
   text-decoration: line-through;
 }
 
@@ -26,8 +26,4 @@
 .book_pointer {
   cursor: pointer;
   padding: 10px;
-}
-
-.book_pointer {
-  cursor: pointer;
 }

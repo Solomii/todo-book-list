@@ -1,0 +1,28 @@
+ .statistics_board {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}  
+
+.statistics_data {
+ margin: 10px;
+}
+
+.statistics_data span {
+  margin-right: 30px;
+}
+
+.statistics_button {
+  width: 100px;
+  height: 25px;
+  background-color: brown;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.statistics_button:active {
+  transform: translateY(4px);
+}

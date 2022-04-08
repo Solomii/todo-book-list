@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+
 import "./style.css";
-import BOOKS_LIST from './store/books.json'
+import BOOKS_LIST from './store/books.json';
 import { Books } from "./components/Books";
-import { Form } from "./components/AddForm"
+import { Form } from "./components/AddForm";
+import { Statistics } from "./components/StatisticsBoard";
+
 
 const App = () => {
   const [bookList, setBookList] = useState(BOOKS_LIST)
@@ -22,7 +25,6 @@ const App = () => {
     setBookList(prevState => {
       return [...prevState.slice(0, index), newObject, ...prevState.slice(index + 1)];
     })
-    
   }
 
   const onAddNewBook = (book)  => {
@@ -31,12 +33,23 @@ const App = () => {
   })
     console.log("book", book)
   }
+
+  const statisticsData = {
+    all: bookList.length,
+    readBooks: bookList.filter((book) => book.isRead).length,
+    notReadBooks: bookList.filter((book) => !book.isRead).length,
+  }
+
+  const removeAll = () => {
+    setBookList([]);
+  }
+
   return (
     <div className="container">
-      <Form onAddNewBook={onAddNewBook}/>
+      <Form onAddNewBook={onAddNewBook} />
+      <Statistics {...statisticsData} onRemoveAll={removeAll} />
       <Books data={bookList} onRemoveBook={removeBook} onReadBook={readBook}/>
     </div>
-  
   )
 };
 
